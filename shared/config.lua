@@ -1,6 +1,6 @@
 Config = {}
 Config.Debug = false
-Config.InteractDistance = 3
+Config.InteractDistance = 3.0
 
 Config.Notifies = {
     ['itemSellMenu'] = {
