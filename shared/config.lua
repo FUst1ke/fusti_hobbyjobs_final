@@ -209,7 +209,7 @@ Config.Zones = {
                 display = 4,
                 scale = 0.5,
                 colour = 5,
-                text = 'Bányász zóna',
+                text = 'Mine',
                 radius = {
                     colour = 5,
                     alpha = 100
@@ -236,7 +236,7 @@ Config.Zones = {
             action = {
                 requiredItem = 'water', -- none or item name
 
-                context = 'Nyomj [E] -t a bányászáshoz',
+                context = 'Press [E] to start mining',
 
                 skillCheckData = { -- if skill check is true
                     difficulty = {'easy', 'easy', 'easy', 'easy'},
@@ -248,7 +248,7 @@ Config.Zones = {
                     display = 2,
                     scale = 1.0,
                     colour = 0,
-                    text = 'Érc',
+                    text = 'Ore',
                 },
 
                 prop = `prop_rock_3_d`,
@@ -260,7 +260,7 @@ Config.Zones = {
 
                 progbar = {
                     time = 5000,
-                    label = 'Bányászás..',
+                    label = 'Mining ore..',
                     attach = {
                         prop = `prop_tool_pickaxe`,
                         bone = 57005,
@@ -339,7 +339,7 @@ Config.Zones = {
                 {position = vec3(-883.7534, 6595.0972, -32.8032), heading = 62.5324}
             },
             action = {
-                requiredItem = 'weld_torch', -- none or item name
+                requiredItem = 'water', -- none or item name
 
                 context = 'Nyomj [E] -t a hegesztéshez',
 
@@ -365,7 +365,7 @@ Config.Zones = {
 
                 progbar = {
                     time = 5000,
-                    label = 'Hegesztés..',
+                    label = 'Opening chest..',
                     attach = {
                         prop = 'prop_weld_torch',
                         bone = 28422,
