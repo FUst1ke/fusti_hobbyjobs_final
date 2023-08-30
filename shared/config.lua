@@ -74,7 +74,10 @@ Config.Notifies = {
         type = 'error',
         icon = 'fa-check'
     },
+
     ['context'] = '[E] to open the menu',
+    ['menu_shop'] = 'Vehicle shop',
+    ['price'] = 'Price',
 }
 
 Config.Zones = {
@@ -129,7 +132,7 @@ Config.Zones = {
                 {position = vec3(2383.6780, 4713.3687, 33.6394), heading = 100.0}
             },
             action = {
-                requiredItem = 'water', -- none or item name
+                requiredItem = 'none', -- none or item name
 
                 context = 'Press [E] to start picking apple',
 
@@ -183,7 +186,7 @@ Config.Zones = {
                 display = 4,
                 scale = 1.2,
                 colour = 5,
-                text = 'Bánya'
+                text = 'Mine'
             }
         },
         ['vehicles'] = {
@@ -220,18 +223,18 @@ Config.Zones = {
                 {position = vec3(2961.16, 2790.8372, 39.4044), heading = 100.0},
                 {position = vec3(2949.5229, 2776.6389, 38.2646), heading = 100.0},
                 {position = vec3(2930.6895, 2795.6553, 39.7646), heading = 100.0},
-                {position = vec3(2962.4783, 2856.1558, 57.4530 - 1), heading = 200.6233},
-                {position = vec3(2938.1255, 2852.5891, 56.9333 - 1), heading = 111.3778},
-                {position = vec3(2912.2505, 2838.6326, 54.8319 - 1), heading = 165.4709},
-                {position = vec3(2902.9358, 2820.8926, 53.9393 - 1), heading = 173.0546},
-                {position = vec3(2906.7520, 2807.3923, 54.2330 - 1), heading = 192.1493},
-                {position = vec3(2885.7776, 2787.1807, 56.3966 - 1), heading = 95.08800},
-                {position = vec3(2905.1936, 2774.9504, 54.0707 - 1), heading = 250.9146},
-                {position = vec3(2906.3328, 2760.0249, 53.5639 - 1), heading = 343.8593},
-                {position = vec3(2922.5044, 2755.9385, 53.6698 - 1), heading = 261.7463},
-                {position = vec3(2944.5488, 2721.9658, 53.8365 - 1), heading = 232.7725},
-                {position = vec3(2958.5435, 2674.3467, 64.0112 - 1), heading = 34.3147},
-                {position = vec3(2964.3723, 2676.4124, 64.2934 - 1), heading = 9.2332},
+                -- {position = vec3(2962.4783, 2856.1558, 57.4530 - 1), heading = 200.6233},
+                -- {position = vec3(2938.1255, 2852.5891, 56.9333 - 1), heading = 111.3778},
+                -- {position = vec3(2912.2505, 2838.6326, 54.8319 - 1), heading = 165.4709},
+                -- {position = vec3(2902.9358, 2820.8926, 53.9393 - 1), heading = 173.0546},
+                -- {position = vec3(2906.7520, 2807.3923, 54.2330 - 1), heading = 192.1493},
+                -- {position = vec3(2885.7776, 2787.1807, 56.3966 - 1), heading = 95.08800},
+                -- {position = vec3(2905.1936, 2774.9504, 54.0707 - 1), heading = 250.9146},
+                -- {position = vec3(2906.3328, 2760.0249, 53.5639 - 1), heading = 343.8593},
+                -- {position = vec3(2922.5044, 2755.9385, 53.6698 - 1), heading = 261.7463},
+                -- {position = vec3(2944.5488, 2721.9658, 53.8365 - 1), heading = 232.7725},
+                -- {position = vec3(2958.5435, 2674.3467, 64.0112 - 1), heading = 34.3147},
+                -- {position = vec3(2964.3723, 2676.4124, 64.2934 - 1), heading = 9.2332},
             },
             action = {
                 requiredItem = 'water', -- none or item name
@@ -270,10 +273,10 @@ Config.Zones = {
                 },
             },
             items = {
-                {value = 'iron',  label = 'Vas',  count = 1, chance = 5, sellPrice = 10},
-                {value = 'metal', label = 'Fém', count = 1, chance = 7, sellPrice = 50},
-                {value = 'gold',   label = 'Arany',   count = 1, chance = 3, sellPrice = 85},
-                {value = 'diamond', label = 'Gyémánt', count = 1, chance = 2, sellPrice = 100} 
+                {value = 'iron',  label = 'Iron',  count = 1, chance = 5, sellPrice = 10},
+                {value = 'metal', label = 'Metal', count = 1, chance = 7, sellPrice = 50},
+                {value = 'gold',   label = 'Gold',   count = 1, chance = 3, sellPrice = 85},
+                {value = 'diamond', label = 'Diamond', count = 1, chance = 2, sellPrice = 100} 
             }
         }
     },
@@ -289,7 +292,7 @@ Config.Zones = {
                 display = 4,
                 scale = 1.2,
                 colour = 68,
-                text = 'Búvárkodás'
+                text = 'Scuba diving'
             }
         },
         ['vehicles'] = {
@@ -314,7 +317,7 @@ Config.Zones = {
                 display = 4,
                 scale = 1.2,
                 colour = 68,
-                text = 'Búvár zóna',
+                text = 'Scuba zone',
                 radius = {
                     colour = 68,
                     alpha = 100
@@ -339,11 +342,11 @@ Config.Zones = {
                 {position = vec3(-883.7534, 6595.0972, -32.8032), heading = 62.5324}
             },
             action = {
-                requiredItem = 'water', -- none or item name
+                requiredItem = 'torch', -- 'none' or item name
 
-                context = 'Nyomj [E] -t a hegesztéshez',
+                context = 'Press [E] to open the chest',
 
-                skillCheckData = { -- if skill check is true
+                skillCheckData = {
                     difficulty = {'easy', 'easy', 'easy', 'easy'},
                     inputs = {'w', 'a', 's', 'd'}
                 },
@@ -353,7 +356,7 @@ Config.Zones = {
                     display = 2,
                     scale = 1.0,
                     colour = 0,
-                    text = 'Láda',
+                    text = 'Chest',
                 },
 
                 prop = `xm_prop_x17_chest_closed`,
@@ -375,13 +378,12 @@ Config.Zones = {
                 },
             },
             items = {
-                {value = 'gold_chain',  label = 'Arany lánc',  count = 1, chance = 2, sellPrice = 10},
-                {value = 'gold_watch', label = 'Arany óra', count = 1, chance = 2, sellPrice = 50},
-                {value = 'gold',  label = 'Arany',  count = 1, chance = 8, sellPrice = 10},
-                {value = 'diamond', label = 'Gyémánt', count = 1, chance = 7, sellPrice = 50},
-                {value = 'smaragd',   label = 'Smaragd',   count = 1, chance = 5, sellPrice = 85},
-                {value = 'emerald',   label = 'Emeráld',   count = 1, chance = 6, sellPrice = 85},
-                {value = 'zapphire',   label = 'Zafír',   count = 1, chance = 4, sellPrice = 85},
+                {value = 'gold_chain',  label = 'Gold chain',  count = 1, chance = 2, sellPrice = 10},
+                {value = 'gold_watch', label = 'Gold watch', count = 1, chance = 2, sellPrice = 50},
+                {value = 'gold',  label = 'Gold',  count = 1, chance = 8, sellPrice = 10},
+                {value = 'diamond', label = 'Diamond', count = 1, chance = 7, sellPrice = 50},
+                {value = 'smaragd',   label = 'Emerald',   count = 1, chance = 5, sellPrice = 85},
+                {value = 'zapphire',   label = 'Zapphire',   count = 1, chance = 4, sellPrice = 85},
                 {value = 'sakura',   label = 'Sakura',   count = 1, chance = 5, sellPrice = 85},
             }
         }
@@ -436,7 +438,7 @@ Config.Zones = {
                 {position = vector3(-1902.05, 2143.31, 119.5), heading = 100.0}
             },
             action = {
-                requiredItem = 'water', -- none or item name
+                requiredItem = 'scissors', -- none or item name
 
                 context = 'Press [E] to start picking',
 
@@ -472,9 +474,7 @@ Config.Zones = {
                 },
             },
             items = {
-                {value = 'burger',  label = 'Burger',  count = 1, chance = 5, sellPrice = 10},
-                {value = 'garbage', label = 'Garbage', count = 1, chance = 7, sellPrice = 50},
-                {value = 'water',   label = 'Water',   count = 1, chance = 6, sellPrice = 85} 
+                {value = 'grape',  label = 'Grape',  count = 1, chance = 5, sellPrice = 10}
             }
         }
     },
@@ -501,9 +501,9 @@ Config.Zones = {
                 radius = 3.0
             },
             list = {
-                {label = 'BobCat XL',     value = 'bobcatxl',     sellPrice = 150},
-                {label = 'Adder',         value = 'adder',     sellPrice = 150},
-                {label = 'Blista',        value = 'blista',     sellPrice = 150}
+                {label = 'BobCat XL',     value = 'bobcatxl',       sellPrice = 150},
+                {label = 'Adder',         value = 'adder',          sellPrice = 150},
+                {label = 'Blista',        value = 'blista',         sellPrice = 150}
             }
         },
         ['actions'] = {
@@ -530,7 +530,7 @@ Config.Zones = {
                 {position = vec3(-583.3246, 5490.6543, 55.7955), heading = 100.0}
             },
             action = {
-                requiredItem = 'water', -- none or item name
+                requiredItem = 'axe', -- none or item name
 
                 context = 'Press [E] to start cutting the tree',
 
@@ -566,9 +566,7 @@ Config.Zones = {
                 },
             },
             items = {
-                {value = 'burger',  label = 'Burger',  count = 1, chance = 5, sellPrice = 10},
-                {value = 'garbage', label = 'Garbage', count = 1, chance = 7, sellPrice = 50},
-                {value = 'water',   label = 'Water',   count = 1, chance = 6, sellPrice = 85} 
+                {value = 'wood',  label = 'Wood',  count = 1, chance = 5, sellPrice = 10}
             }
         }
     }

@@ -44,7 +44,7 @@ local function nearbyStartPoint(self)
             local vehicle = self.vehicleData
             local actionsData = self.actionsData
             local options = createVehicleShop(vehicle, actionsData)
-            lib.registerContext({id = 'vehicleshop', title = 'Jármű választó', options = options})
+            lib.registerContext({id = 'vehicleshop', title = Config.Notifies['menu_shop'], options = options})
             lib.showContext('vehicleshop')
         end
     end
